@@ -1,40 +1,42 @@
 
 var info = [
-    {"name":"Shyam", "age": "33", "email":"shyamjaiswal@gmail.com"},  
+    {"name":"eliza", "age": "33", "email":"shyamjaiswal@gmail.com"},  
     {"name":"Bob","age": "24",  "email":"bob32@gmail.com"},  
-    {"name":"Jai","age": "54",  "email":"jai87@gmail.com"}, 
-    {"name":"Nim","age": "14",  "email":"shyamjaiswal@gmail.com"},  
+    {"name":"victor","age": "54",  "email":"jai87@gmail.com"}, 
+    {"name":"Red","age": "14",  "email":"shyamjaiswal@gmail.com"},  
     {"name":"Omkar","age": "54",  "email":"bob32@gmail.com"},  
-    {"name":"Jai","age": "32",  "email":"jai87@gmail.com"}, 
+    {"name":"siddhi","age": "32",  "email":"jai87@gmail.com"}, 
     {"name":"durg","age": "30",  "email":"shyamjaiswal@gmail.com"},  
     {"name":"happy","age": "34",  "email":"bob32@gmail.com"},  
     {"name":"pallavi","age": "24",  "email":"jai87@gmail.com"},
     {"name":"Shyam", "age": "33", "email":"shyamjaiswal@gmail.com"},  
-    {"name":"Bob","age": "24",  "email":"bob32@gmail.com"},  
-    {"name":"Jai","age": "54",  "email":"jai87@gmail.com"}, 
+    {"name":"raghav","age": "24",  "email":"bob32@gmail.com"},  
+    {"name":"chinmay","age": "54",  "email":"jai87@gmail.com"}, 
     {"name":"Nim","age": "14",  "email":"shyamjaiswal@gmail.com"},  
     {"name":"Omkar","age": "54",  "email":"bob32@gmail.com"},  
     {"name":"Jai","age": "32",  "email":"jai87@gmail.com"}, 
-    {"name":"durg","age": "30",  "email":"shyamjaiswal@gmail.com"},  
-    {"name":"happy","age": "34",  "email":"bob32@gmail.com"},  
-    {"name":"pallavi","age": "24",  "email":"jai87@gmail.com"}
+    {"name":"liz","age": "30",  "email":"shyamjaiswal@gmail.com"},  
+    {"name":"cooper","age": "34",  "email":"bob32@gmail.com"},  
+    {"name":"raymond","age": "24",  "email":"jai87@gmail.com"}
 ]
 
 
-var update = document.querySelector(".update");
+var rowUpdate = document.querySelector(".rowUpdate");
 
 
 function data(database){
+
+    rowUpdate.innerHTML = " ";
     for(var i=0; i < database.length; i++ ){
-        update.innerHTML += `<tr> 
-                            <td>${database[i].name} </td>
-                            <td>${database[i].age} </td>
-                            <td>${database[i].email} </td>
-                            </tr>`
+        rowUpdate.innerHTML += `<tr> 
+                               <td>${database[i].name} </td>
+                               <td>${database[i].age} </td>
+                               <td>${database[i].email} </td>
+                               </tr>`
     }
 }
 
-// data(info);
+data(info);
 
 
 var search = document.querySelector("#searchBar");
@@ -63,21 +65,3 @@ function getResult(value){
 
    return searchName;
 }
-
-
-// <<<<<<<<<<callback data fetching>>>>>>>>>>>>
-
-// setTimeout(function(d1) {
-
-//     d1 = info;
-
-//     for(var i=0; i < d1.length; i++ ){
-//         update.innerHTML += `<tr> 
-//                             <td>${d1[i].name} </td>
-//                             <td>${d1[i].age} </td>
-//                             <td>${d1[i].email} </td>
-//                             </tr>`
-//     }
-    
-// }, 1000*3)
-
